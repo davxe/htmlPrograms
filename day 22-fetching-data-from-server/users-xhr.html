@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script>
+            const rootHandle=document.getElementById('root')
+            const url='https://jsonplaceholder.typicode.com/users'
+
+            const xhr=new XMLHttpRequest()
+            xhr.open('GET',url)
+            xhr.send()
+            // sucessfully receiving data
+            xhr.onload=function(){
+                const users=JSON.parse(xhr.responseText)
+                console.log(users)
+            }
+
+            //error while getting data 
+            xhr.onerror=function(){
+                
+            }
+            
+        </script>
+
+    </body>
+</html>

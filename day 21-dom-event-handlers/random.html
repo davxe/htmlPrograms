@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script>
+            const rootHandle=document.getElementById('root')
+            const h1Tag=document.createElement('h1')
+            h1Tag.innerHTML=0
+            rootHandle.appendChild(h1Tag)
+
+            const generateBtn=document.createElement('button')
+            generateBtn.innerHTML='generate'
+            rootHandle.appendChild(generateBtn)
+
+            generateBtn.addEventListener('click',function()
+            {
+                h1Tag.innerHTML=Math.round(Math.random()*100)
+            })
+            
+        </script>
+
+    </body>
+</html>

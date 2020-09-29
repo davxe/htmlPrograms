@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script>
+            const rootHandle=document.getElementById('root')
+            const h1Tag=document.createElement('h1')
+            h1Tag.innerHTML=0
+            rootHandle.appendChild(h1Tag)
+
+            const generateBtn=document.createElement('button')
+            generateBtn.innerHTML='generate'
+            rootHandle.appendChild(generateBtn)
+
+            const ulTag=document.createElement('ul')
+            rootHandle.appendChild(ulTag)
+
+            const store=[]
+
+            generateBtn.addEventListener('click',function()
+            {
+                let liTag=document.createElement('li')
+                liTag.setAttribute('type','circle')
+
+                h1Tag.innerHTML=Math.round(Math.random()*100)
+                store.push(h1Tag.innerHTML)
+                store.forEach((ele)=>
+                {
+                    liTag.innerHTML=ele
+                    ulTag.appendChild(liTag)
+                })
+            })
+        </script>
+    </body>
+</html>

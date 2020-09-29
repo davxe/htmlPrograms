@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            hello
+        </title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script>
+            const msg='Hello World'
+            const rootHandle=document.getElementById('root')//it is used to reference the html 
+            const h1Tag=document.createElement('h1')
+            const pTag=document.createElement('p')
+            const msg1="this is a paragraph tg"
+            pTag.innerHTML=msg1
+            h1Tag.innerHTML=msg.toUpperCase()
+            rootHandle.appendChild(h1Tag)
+            rootHandle.appendChild(pTag)
+        </script>
+
+    </body>
+</html>

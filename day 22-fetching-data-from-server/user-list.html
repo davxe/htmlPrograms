@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script>
+            const rootHandle=document.getElementById('root')
+            const url='https://jsonplaceholder.typicode.com/users'
+
+            const xhr=new XMLHttpRequest()
+            xhr.open('GET',url)
+            xhr.send()
+            // sucessfully receiving data
+            xhr.onload=function(){
+                const users=JSON.parse(xhr.responseText)
+                console.log(users)
+                // const h2Tag=document.createElement('h2')
+                // h2Tag.innerHTML=`listing players - ${users.length}`
+                // rootHandle.appendChild(h2Tag)
+                // const ulTag=document.createElement('ul')
+                // rootHandle.appendChild(ulTag)
+                // users.forEach(element => {
+                //     const liTag=document.createElement('li')
+                // liTag.setAttribute('type','square')
+                // liTag.innerHTML=element.name
+                // ulTag.appendChild(liTag)
+                // });
+
+           
+            
+            }
+
+            //error while getting data 
+            xhr.onerror=function(){
+                
+            }
+            
+        </script>
+
+    </body>
+</html>

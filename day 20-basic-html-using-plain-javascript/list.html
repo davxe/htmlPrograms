@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+        <div id="root">
+            <!-- <h2>Listing Players-8</h2>
+            <ol type='i'>
+                <li>Sachin</li>
+                <li>Shewag</li>
+                <li>Saurav</li>
+                <li>ashwin</li>
+                <li>dhoni</li>
+                <li>yuvraj</li>
+                <li>rahul</li>
+                <li>sikhar</li>
+            </ol>-->
+        </div>
+        <script>
+            const rootHandle=document.getElementById('root')
+            const players=['sachin','shewag','virat','ashwin','saurav','shikhar','rahul','yuvraj','dhoni']
+            const h2Tag=document.createElement('h2')
+            h2Tag.innerHTML=`listing players - ${players.length}`
+            rootHandle.appendChild(h2Tag)
+
+            const ulTag=document.createElement('ul')
+            rootHandle.appendChild(ulTag)
+
+           // const ascBtn=document.createElement('button')
+
+            players.sort().forEach(function(ele)
+            {
+                const liTag=document.createElement('li')
+                liTag.setAttribute('type','square')
+                liTag.innerHTML=ele
+                ulTag.appendChild(liTag)
+
+            })
+
+        </script>
+    </body>
+</html>

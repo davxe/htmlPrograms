@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script>
+            const rootHandle=document.getElementById('root')
+            // const centerTag=document.createElement('center')
+            // rootHandle.append(centerTag)
+
+            const h1Tag=document.createElement('h1')
+            h1Tag.innerHTML=0
+            rootHandle.appendChild(h1Tag)
+
+            const upBtn=document.createElement('button')
+            upBtn.innerHTML='up'
+            rootHandle.appendChild(upBtn)
+            upBtn.addEventListener('click',function(){
+                h1Tag.innerHTML=Number(h1Tag.innerHTML)+1
+            })
+
+
+            const downBtn=document.createElement('button')
+            downBtn.innerHTML='down'
+            rootHandle.appendChild(downBtn)
+            downBtn.addEventListener('click',function(){
+                h1Tag.innerHTML=Number(h1Tag.innerHTML)-1
+            })
+
+            const reverseBtn=document.createElement('button')
+            reverseBtn.innerHTML='reverse'
+            rootHandle.appendChild(reverseBtn)
+            reverseBtn.addEventListener('click',function(){
+                const confirmReset=confirm('are you sure')
+                if(confirmReset)
+                {
+                    h1Tag.innerHTML=0
+                }
+            })
+        </script>
+
+    </body>
+</html>
